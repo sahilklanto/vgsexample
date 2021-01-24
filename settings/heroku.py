@@ -3,7 +3,7 @@ from settings.base import *
 import os
 import dj_database_url 
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['vgsexample.herokuapp.com']
 
