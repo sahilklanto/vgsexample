@@ -9,6 +9,10 @@ router = DefaultRouter()
 
 router.register('card-data', views.CardDataModelViewSet, basename='card-data')
 
-urlpatterns = []
+urlpatterns = [
+    path('reveal-data', views.RevealData.as_view(), name='reveal-data'),
+    path('tokenize-image', views.TokenizeImage.as_view(), name='tokenize-image'),
+    path('temp', views.Temp.as_view(), name='temp')
+]
 
 urlpatterns += router.urls

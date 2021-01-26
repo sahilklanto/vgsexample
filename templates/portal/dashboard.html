@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>VGS Collect Credit Card Example</title>
+  <title>Klanto | VGS Example </title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -98,6 +98,16 @@
             <!--Submit credit card form button-->
             <button type="submit" class="btn btn-success btn-block">Submit</button>
           </form>
+
+          <hr></hr>
+          <h3>Tokenize Image Here</h3>
+          <hr></hr>
+          <form id="ti-form">
+            <label>Upload Image (PNG, JPG, JPEG)</label>
+            <input name="image" id='image' type="file" accept=".jpg,.jpeg,.png" class="form-control">
+            <br>
+            <button type="submit" class="btn btn-outline-primary">Tokenize</button>
+          </form>
         </div>
       </div>
     </div>
@@ -116,6 +126,7 @@
         <pre id="result">
           Submit a form to see result.
         </pre>
+        <a href="/reveal">Click to see the serialized results</a>
       </div>
     </div>
   </div>
@@ -182,6 +193,28 @@
     }, function (errors) {
       document.getElementById('result').innerHTML = errors;
     });
+
+    $("#ti-form").on("submit", function(event) {
+      event.preventDefault();
+      console.log(this);
+      const formData = new FormData(this);
+
+      $.ajax({
+        url: '{{url}}',
+        type: 'post',
+        data: formData,
+        success: function(res) {
+          console.log(res);
+        },
+        error: function(err){ 
+          console.log(err);
+        },
+        cache: false,
+        contentType: false,
+        processData: false
+      })
+    });
+
 </script>
 </body>
 </html>
