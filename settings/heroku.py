@@ -13,4 +13,4 @@ DATABASES = {
     )
 }
 
-ENDPOINT_URL = 'https://vgsendpoint.herokuapp.com/api/v1/dummy-view'
+ENDPOINT_URL = 'https://vgsendpoint.herokuapp.com'
