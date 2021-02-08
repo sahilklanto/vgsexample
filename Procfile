@@ -1,1 +1,1 @@
-web: gunicorn vgsexample.wsgi
+web: gunicorn vgsdemo.wsgi
