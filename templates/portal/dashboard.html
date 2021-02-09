@@ -1,151 +1,457 @@
-{% extends 'portal/base.html' %}
-
-{% block content %}
-<h1 class="float-left">VGS Demo</h1>
-<br>
-<br>
-<br>
-<br>
+{% extends 'portal/base.html' %} {% block content %}
+<h1 class="float-left">VGS Demo - Alias data</h1>
+<br />
+<br />
+<br />
+<br />
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-6">
-            <form id="vgs-demo">
-                <div class="form-group">
-                    <label>Account Number</label>
-                    <input type="text" id="account-number" class="form-control" placeholder="Account Number" required/>
-                </div>
-                <div class="form-group">
-                    <label>SSN</label>
-                    <input type="text" id="ssn" class="form-control" placeholder="SSN"  required/>
-                </div>
-                <div class="form-group">
-                    <label>Passport Number</label>
-                    <input type="text" id="passport-number" class="form-control" placeholder="Passport Number"  required/>
-                </div>
-                <div class="form-group">
-                    <label>Company Registration Number</label>
-                    <input type="text" id="company-registration-number" class="form-control" placeholder="Company Registration Number"  required/>
-                </div>
-                <div class="form-group">
-                    <label>Proof Of ID</label>
-                    <input type="file" id="proof-of-id" class="form-control" placeholder="Proof Of ID"  required/>
-                </div>
-                <button type="submit" class="float-right btn btn-success">Submit</button>
-            </form>
+  <div class="row">
+    <div class="col-6">
+      <form id="vgs-demo-redact">
+        <div class="form-group">
+          <label>Account Number</label>
+          <input
+            type="text"
+            id="account-number"
+            class="form-control"
+            placeholder="Account Number"
+          />
         </div>
-        <div class="col-6">
-            <div class="form-group">
-                <label>Account Number</label>
-                <input type="text" id="daccount-number" class="form-control" placeholder="Account Number" readonly/>
-            </div>
-            <div class="form-group">
-                <label>SSN</label>
-                <input type="text" id="dssn" class="form-control" placeholder="SSN"  readonly/>
-            </div>
-            <div class="form-group">
-                <label>Passport Number</label>
-                <input type="text" id="dpassport-number" class="form-control" placeholder="Passport Number"  readonly/>
-            </div>
-            <div class="form-group">
-                <label>Company Registration Number</label>
-                <input type="text" id="dcompany-registration-number" class="form-control" placeholder="Company Registration Number"  readonly/>
-            </div>
-            <div class="form-group">
-                <label>Proof Of ID</label>
-                <input type="text" id="dproofofid" class="form-control" placeholder="Proof Of ID" readonly />
-            </div>
+        <div class="form-group">
+          <label>SSN</label>
+          <input type="text" id="ssn" class="form-control" placeholder="SSN" />
         </div>
+        <div class="form-group">
+          <label>Passport Number</label>
+          <input
+            type="text"
+            id="passport-number"
+            class="form-control"
+            placeholder="Passport Number"
+          />
+        </div>
+        <div class="form-group">
+          <label>Company Registration Number</label>
+          <input
+            type="text"
+            id="company-registration-number"
+            class="form-control"
+            placeholder="Company Registration Number"
+          />
+        </div>
+        <div class="form-group">
+          <label>Proof Of ID</label>
+          <input
+            type="file"
+            id="proof-of-id"
+            class="form-control"
+            placeholder="Proof Of ID"
+          />
+        </div>
+        <button type="submit" class="float-right btn btn-success">
+          Submit
+        </button>
+      </form>
     </div>
+    <div class="col-6">
+      <div class="form-group">
+        <label>Account Number</label>
+        <input
+          type="text"
+          id="daccount-number"
+          class="form-control"
+          placeholder="Account Number"
+          readonly
+        />
+      </div>
+      <div class="form-group">
+        <label>SSN</label>
+        <input
+          type="text"
+          id="dssn"
+          class="form-control"
+          placeholder="SSN"
+          readonly
+        />
+      </div>
+      <div class="form-group">
+        <label>Passport Number</label>
+        <input
+          type="text"
+          id="dpassport-number"
+          class="form-control"
+          placeholder="Passport Number"
+          readonly
+        />
+      </div>
+      <div class="form-group">
+        <label>Company Registration Number</label>
+        <input
+          type="text"
+          id="dcompany-registration-number"
+          class="form-control"
+          placeholder="Company Registration Number"
+          readonly
+        />
+      </div>
+      <div class="form-group">
+        <label>Proof Of ID</label>
+        <input
+          type="text"
+          id="dproofofid"
+          class="form-control"
+          placeholder="Proof Of ID"
+          readonly
+        />
+      </div>
+    </div>
+  </div>
+  <h1 class="float-left">Reveal Data</h1>
+  <br />
+  <br />
+  <br />
+  <br />
+  <div class="row">
+    <div class="col-6">
+      <form id="vgs-demo-reveal">
+        <div class="form-group">
+          <label>Account Number</label>
+          <input
+            type="text"
+            id="raccount-number"
+            class="form-control"
+            placeholder="Account Number"
+          />
+        </div>
+        <div class="form-group">
+          <label>SSN</label>
+          <input type="text" id="rssn" class="form-control" placeholder="SSN" />
+        </div>
+        <div class="form-group">
+          <label>Passport Number</label>
+          <input
+            type="text"
+            id="rpassport-number"
+            class="form-control"
+            placeholder="Passport Number"
+          />
+        </div>
+        <div class="form-group">
+          <label>Company Registration Number</label>
+          <input
+            type="text"
+            id="rcompany-registration-number"
+            class="form-control"
+            placeholder="Company Registration Number"
+          />
+        </div>
+        <div class="form-group">
+          <label>Proof Of ID</label>
+          <input
+            type="text"
+            id="rproof-of-id"
+            class="form-control"
+            placeholder="Proof Of ID"
+          />
+        </div>
+        <button type="submit" class="float-right btn btn-success">
+          Submit
+        </button>
+      </form>
+    </div>
+    <div class="col-6">
+      <div class="form-group">
+        <label>Account Number</label>
+        <input
+          type="text"
+          id="rdaccount-number"
+          class="form-control"
+          placeholder="Account Number"
+          disabled
+        />
+      </div>
+      <div class="form-group">
+        <label>SSN</label>
+        <input
+          type="text"
+          id="rdssn"
+          class="form-control"
+          placeholder="SSN"
+          disabled
+        />
+      </div>
+      <div class="form-group">
+        <label>Passport Number</label>
+        <input
+          type="text"
+          id="rdpassport-number"
+          class="form-control"
+          placeholder="Passport Number"
+          disabled
+        />
+      </div>
+      <div class="form-group">
+        <label>Company Registration Number</label>
+        <input
+          type="text"
+          id="rdcompany-registration-number"
+          class="form-control"
+          placeholder="Company Registration Number"
+          disabled
+        />
+      </div>
+      <div class="form-group">
+        <label>Proof Of ID</label>
+        <img src="" id="pid" />
+        <a href="" id="pdf" hidden="hidden">Download File</a>
+      </div>
+    </div>
+  </div>
 </div>
 <script>
-    const convertBinaryToB64 = (file, cb) => {
-        let reader = new FileReader();
-        reader.readAsDataURL(file);
-        reader.onload = function () {
-            cb(reader.result);
-        };  
-        reader.onerror = function (error) {
-            console.log('error', error);
-        }   
-    }   
+  const convertBinaryToB64 = (file, cb) => {
+    let reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = function () {
+      cb(reader.result);
+    };
+    reader.onerror = function (error) {
+      console.log("error", error);
+    };
+  };
 
-    $("#vgs-demo").submit((e) => {
-        e.preventDefault();
-        let account_number = $("#account-number").val();
-        let ssn = $("#ssn").val();
-        let passport_number = $("#passport-number").val();
-        let company_registration_number = $("#company-registration-number").val();
-        let proof_of_id =  $("#proof-of-id").prop('files')[0];
+  $("#vgs-demo-redact").submit((e) => {
+    e.preventDefault();
+    let account_number = $("#account-number").val();
+    let ssn = $("#ssn").val();
+    let passport_number = $("#passport-number").val();
+    let company_registration_number = $("#company-registration-number").val();
+    let proof_of_id = $("#proof-of-id").prop("files")[0];
+    var url = "https://tntfgytmgki.sandbox.verygoodproxy.com/post";
 
-        $.ajax({
-            url: 'https://tntfgytmgki.SANDBOX.verygoodproxy.com/post',
-            data: {'image': account_number},
-            headers: {'Content-Type': 'image/jpeg'},
-            type: 'post',
-            success: function(res){
-                console.log(res);
-                $("#dproofofid").val(res.data);
-            },
-            error: function(err){
-                console.log(err);
-            }
-        });
-
-        $.ajax({
-            url: 'https://tntpgzedvef.sandbox.verygoodproxy.com/post',
-            data: {'ssn': account_number},
-            headers: {'Content-Type': 'application/json'},
-            type: 'post',
-            success: function(res){
-                console.log(res);
-                $("#daccount-number").val(res.data);
-            },
-            error: function(err){
-                console.log(err);
-            }
-        });
-
-        $.ajax({
-            url: 'https://tntpgzedvef.sandbox.verygoodproxy.com/post',
-            data: {'ssn': ssn},
-            headers: {'Content-Type': 'application/json'},
-            type: 'post',
-            success: function(res){
-                console.log(res);
-                $("#dssn").val(res.data);
-            },
-            error: function(err){
-                console.log(err);
-            }
-        });
-
-        $.ajax({
-            url: 'https://tntpgzedvef.sandbox.verygoodproxy.com/post',
-            data: {'ssn': passport_number},
-            headers: {'Content-Type': 'application/json'},
-            type: 'post',
-            success: function(res){
-                console.log(res);
-                $("#dpassport-number").val(res.data);
-            },
-            error: function(err){
-                console.log(err);
-            }
-        });
-
-        $.ajax({
-            url: 'https://tntpgzedvef.sandbox.verygoodproxy.com/post',
-            data: {'ssn': company_registration_number},
-            headers: {'Content-Type': 'application/json'},
-            type: 'post',
-            success: function(res){
-                console.log(res);
-                $("#dcompany-registration-number").val(res.data);
-            },
-            error: function(err){
-                console.log(err);
-            }
-        });
+    convertBinaryToB64(proof_of_id, (result) => {
+      $.ajax({
+        url: "https://tntfgytmgki.SANDBOX.verygoodproxy.com/post",
+        data: result,
+        dataType: "json",
+        headers: { "Content-Type": "image/jpeg" },
+        type: "post",
+        success: function (res) {
+          console.log(res);
+          $("#dproofofid").val(res.data);
+        },
+        error: function (err) {
+          console.log(err);
+        },
+      });
     });
+
+    function aliasAccountNumber() {
+      let xhr = new XMLHttpRequest();
+      xhr.open("POST", url);
+      xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.responseType = "json";
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          console.log(xhr.status);
+          console.log(xhr.response);
+        }
+      };
+
+      var data = `{"acnumber":"${account_number}"}`;
+
+      xhr.onload = function () {
+        if (xhr.status != 200) {
+          console.log("error");
+        } else {
+          console.log(xhr.response);
+          $("#daccount-number").val(JSON.parse(xhr.response.data).acnumber);
+        }
+      };
+
+      xhr.send(data);
+    }
+
+    function aliasSSN() {
+      let xhr = new XMLHttpRequest();
+      xhr.open("POST", url);
+      xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.responseType = "json";
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          console.log(xhr.status);
+          console.log(xhr.response);
+        }
+      };
+
+      var data = `{"ssn":"${ssn}"}`;
+
+      xhr.onload = function () {
+        if (xhr.status != 200) {
+          console.log("error");
+        } else {
+          console.log(
+            "HERE BE THE OUTPUT MY GUY",
+            JSON.parse(xhr.response.data)
+          );
+          console.log(JSON.parse(xhr.response.data).dssn);
+          $("#dssn").val(JSON.parse(xhr.response.data).ssn);
+        }
+      };
+
+      xhr.send(data);
+    }
+
+    function aliasPassport() {
+      let xhr = new XMLHttpRequest();
+      xhr.open("POST", url);
+      xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.responseType = "json";
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          console.log(xhr.status);
+          console.log(xhr.response);
+        }
+      };
+
+      var data = `{"passport":"${passport_number}"}`;
+
+      xhr.onload = function () {
+        if (xhr.status != 200) {
+          console.log("error");
+        } else {
+          console.log(JSON.parse(xhr.response.data).passport);
+          $("#dpassport-number").val(JSON.parse(xhr.response.data).passport);
+        }
+      };
+
+      xhr.send(data);
+    }
+
+    function aliasCompanyRegistrationNumber() {
+      var crnxhr = new XMLHttpRequest();
+      crnxhr.open("POST", url);
+
+      crnxhr.setRequestHeader("Content-Type", "application/json");
+      crnxhr.responseType = "json";
+
+      crnxhr.onreadystatechange = function () {
+        if (crnxhr.readyState === 4) {
+          console.log(crnxhr.status);
+          console.log(crnxhr.response);
+          console.log(typeof crnxhr.response);
+        }
+      };
+
+      var data = `{"company_registration_number":"${company_registration_number}"}`;
+
+      crnxhr.onload = function () {
+        if (crnxhr.status != 200) {
+          console.log("error ");
+        } else {
+          console.log(
+            JSON.parse(crnxhr.response.data).company_registration_number
+          );
+
+          $("#dcompany-registration-number").val(
+            JSON.parse(crnxhr.response.data).company_registration_number
+          );
+        }
+      };
+
+      crnxhr.send(data);
+    }
+
+    aliasAccountNumber();
+    aliasSSN();
+    aliasPassport();
+    aliasCompanyRegistrationNumber();
+  });
+
+  $("#vgs-demo-reveal").submit((e) => {
+    e.preventDefault();
+    let tacno = $("#raccount-number").val();
+    let tssn = $("#rssn").val();
+    let tpassportnumber = $("#rpassport-number").val();
+    let crn = $("#rcompany-registration-number").val();
+    let pid = $("#rproof-of-id").val();
+
+    $.ajax({
+      url: "https://echo.apps.verygood.systems/post",
+      data: JSON.stringify({ ssn: tssn }),
+      type: "post",
+      contentType: "application/json",
+      dataType: "json",
+      success: function (res) {
+        $("#rdssn").val(JSON.parse(res.data).ssn);
+      },
+      error: function (err) {
+        console.log(err);
+      },
+    });
+
+    $.ajax({
+      url: "https://echo.apps.verygood.systems/post",
+      headers: { "Content-Type": "application/json" },
+      data: JSON.stringify({ acnumber: tacno }),
+      type: "post",
+      success: function (res) {
+        console.log(res);
+        $("#rdaccount-number").val(JSON.parse(res.data).acnumber);
+      },
+      error: function (err) {
+        console.log(err);
+      },
+    });
+
+    $.ajax({
+      url: "https://echo.apps.verygood.systems/post",
+      headers: { "Content-Type": "application/json" },
+      data: JSON.stringify({ passport: tpassportnumber }),
+      type: "post",
+      success: function (res) {
+        $("#rdpassport-number").val(JSON.parse(res.data).passport);
+        console.log(res);
+      },
+      error: function (err) {
+        console.log(err);
+      },
+    });
+
+    $.ajax({
+      url: "https://echo.apps.verygood.systems/post",
+      headers: { "Content-Type": "application/json" },
+      data: JSON.stringify({ company_registration_number: crn }),
+      type: "post",
+      success: function (res) {
+        console.log(res);
+        $("#rdcompany-registration-number").val(
+          JSON.parse(res.data).company_registration_number
+        );
+      },
+      error: function (err) {
+        console.log(err);
+      },
+    });
+
+    function renderPdfOrImage(data) {
+        $("#pdf").prop("href", data);
+        $("#pdf").removeAttr('hidden');
+    }
+
+    $.ajax({
+      url: "https://echo.apps.verygood.systems/post",
+      headers: { "Content-Type": "image/jpeg" },
+      data: pid,
+      type: "post",
+      success: function (res) {
+        console.log(res);
+        renderPdfOrImage(res.data);
+      },
+      error: function (err) {
+        console.log(err);
+      },
+    });
+  });
 </script>
 {% endblock %}
