@@ -15,11 +15,12 @@
             id="account-number"
             class="form-control"
             placeholder="Account Number"
+            required
           />
         </div>
         <div class="form-group">
           <label>SSN</label>
-          <input type="text" id="ssn" class="form-control" placeholder="SSN" />
+          <input type="text" id="ssn" class="form-control" placeholder="SSN" required/>
         </div>
         <div class="form-group">
           <label>Passport Number</label>
@@ -28,6 +29,7 @@
             id="passport-number"
             class="form-control"
             placeholder="Passport Number"
+            required
           />
         </div>
         <div class="form-group">
@@ -37,6 +39,7 @@
             id="company-registration-number"
             class="form-control"
             placeholder="Company Registration Number"
+            required
           />
         </div>
         <div class="form-group">
@@ -46,6 +49,7 @@
             id="proof-of-id"
             class="form-control"
             placeholder="Proof Of ID"
+            required
           />
         </div>
         <button type="submit" class="float-right btn btn-success">
@@ -107,6 +111,11 @@
     </div>
   </div>
   <h1 class="float-left">Reveal Data</h1>
+  <br>
+  <br>
+  <br>
+  <h3>Please download the PAC file linked below and configure it in your Network proxy in Firefox or any other desired browser</h3>
+  <a href="https://easyupload.io/0np73p" target="_blank">Download PAC Link</a>
   <br />
   <br />
   <br />
@@ -203,7 +212,7 @@
       <div class="form-group">
         <label>Proof Of ID</label>
         <img src="" id="pid" />
-        <a href="" id="pdf" hidden="hidden">Download File</a>
+        <a href="" id="pdf" hidden="hidden" download>Download File</a>
       </div>
     </div>
   </div>
