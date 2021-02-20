@@ -49,6 +49,7 @@
             id="proof-of-id"
             class="form-control"
             placeholder="Proof Of ID"
+            accept=".jpg,.jpeg,.png,.pdf"
             required
           />
         </div>
@@ -241,8 +242,8 @@
 
     convertBinaryToB64(proof_of_id, (result) => {
       $.ajax({
-        url: "https://tntfgytmgki.SANDBOX.verygoodproxy.com/post",
-        data: result,
+        url: "https://tntkpbsubka.live.verygoodproxy.com/post",
+        data: {'pid': result},
         dataType: "json",
         headers: { "Content-Type": "image/jpeg" },
         type: "post",
