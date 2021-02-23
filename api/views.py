@@ -16,9 +16,15 @@ class VGSRequestSerializer(ModelSerializer):
 
 class LogRequest(APIView):
     def post(self, request):
-        logger.info("REQUEST DATA {}".format(request.__dir__()))
-        logger.info("REQUEST DATA {}".format(request.data))
-        logger.info("REQUEST DATA {}".format(dict(request.data)))
-        request_object = VGSRequest.objects.create(response=request.data)
+        d = {}
+
+        for key, value in request.data.items():
+            print(value)
+            print(value[0])
+            d[key] = value[0]
+
+        logger.info("asdfasdfasdf {}".format(d))
+
+        request_object = VGSRequest.objects.create(response=dict(request.data))
         data = VGSRequestSerializer(request_object)
         return Response(data.data, status=status.HTTP_200_OK)
