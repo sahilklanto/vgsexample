@@ -14,3 +14,4 @@ DATABASES = {
 }
 
 ENDPOINT_URL = 'https://vgsendpoint.herokuapp.com'
+VGS_URL = os.environ.get('VGS_URL')

@@ -18,3 +18,5 @@ DATABASES = {
         'PORT': '5432'
     }
 }
+
+VGS_URL = os.environ.get('VGS_URL')
