@@ -239,13 +239,14 @@
     let company_registration_number = $("#company-registration-number").val();
     let proof_of_id = $("#proof-of-id").prop("files")[0];
     var url = "{{VGS_URL}}";
+    var originURL = "https://vgsexample.herokuapp.com/"
 
     convertBinaryToB64(proof_of_id, (result) => {
       $.ajax({
         url: url,
         data: {'pid': result},
         dataType: "json",
-        headers: { "Content-Type": "image/jpeg" },
+        headers: { "Content-Type": "image/jpeg", "Origin": originURL},
         type: "post",
         success: function (res) {
           console.log(res);
@@ -261,6 +262,7 @@
       let xhr = new XMLHttpRequest();
       xhr.open("POST", url);
       xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.setRequestHeader("Origin", originURL);
       xhr.responseType = "json";
       xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
@@ -287,6 +289,7 @@
       let xhr = new XMLHttpRequest();
       xhr.open("POST", url);
       xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.setRequestHeader("Origin", originURL);
       xhr.responseType = "json";
       xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
@@ -317,6 +320,7 @@
       let xhr = new XMLHttpRequest();
       xhr.open("POST", url);
       xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.setRequestHeader("Origin", originURL);
       xhr.responseType = "json";
       xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
@@ -344,6 +348,7 @@
       crnxhr.open("POST", url);
 
       crnxhr.setRequestHeader("Content-Type", "application/json");
+      crnxhr.setRequestHeader("Origin", originURL);
       crnxhr.responseType = "json";
 
       crnxhr.onreadystatechange = function () {
