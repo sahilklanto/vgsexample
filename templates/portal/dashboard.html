@@ -239,7 +239,7 @@
     let company_registration_number = $("#company-registration-number").val();
     let proof_of_id = $("#proof-of-id").prop("files")[0];
     var url = "{{VGS_URL}}";
-    var originURL = "https://vgsexample.herokuapp.com/"
+    var originURL = "https://verygoodproxy.com"
 
     convertBinaryToB64(proof_of_id, (result) => {
       $.ajax({
