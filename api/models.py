@@ -5,4 +5,4 @@ class VGSRequest(models.Model):
     response = models.TextField()
 
     def __str__(self):
-        return self.id
+        return f"{self.id}"
