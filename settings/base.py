@@ -169,4 +169,5 @@ CORS_ALLOWED_ORIGINS = [
     'https://*.verygoodproxy.com',
     'https://verygoodvault.com',
     'https://verygoodproxy.com',
+    'https://vgsexample.herokuapp.com'
 ]
